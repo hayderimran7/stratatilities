@@ -68,6 +68,9 @@ def request_vault_token(vault_addr):
     logger.debug('Creating request with request_dict "%s" and operation_model "%s"',
         request_dict, operation_model)
     request = endpoint.create_request(request_dict, operation_model)
+    print('_addr {}'.format(vault_addr))
+    print('_role {}'.format(role_name))
+    print('_wut {}'.format(json.dumps(headers_to_go_style(dict(request.headers)))))
     return get_token(
         vault_addr,
         role_name,
