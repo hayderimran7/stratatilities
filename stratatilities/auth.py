@@ -9,7 +9,7 @@ except ImportError:
 
 import boto3
 import hvac
-import requests
+import botocore.vendored.requests as requests
 try:
     from requests.packages.urllib3.exceptions import InsecureRequestWarning
     requests.packages.urllib3.disable_warnings(InsecureRequestWarning)

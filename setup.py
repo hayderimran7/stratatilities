@@ -12,10 +12,9 @@ with open('HISTORY.md') as history_file:
     history = history_file.read()
 
 requirements = [
-    'Click>=6.0',
-    'boto3',
-    'requests',
-    'hvac',
+    'Click==6.7',
+    'boto3==1.7.1',
+    'hvac==0.5.0',
     # TODO: put package requirements here
 ]
 
