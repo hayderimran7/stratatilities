@@ -65,6 +65,7 @@ def request_vault_token(vault_addr):
 
     awsIamServerId = urlparse(vault_addr).hostname
     request_dict['headers']['X-Vault-awsiam-Server-Id'] = awsIamServerId
+    request_dict['headers']['X-Vault-AWS-IAM-Server-ID'] = awsIamServerId
 
     logger.debug('Creating request with request_dict "%s" and operation_model "%s"',
         request_dict, operation_model)
